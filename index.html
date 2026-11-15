@@ -20,50 +20,76 @@
 
   /* === эпохи-пласты (музейная стратиграфия) === */
   .band { position: absolute; left: 0; width: 100%; height: 104px; z-index: 0; }
-  /* V: старинная фотография — сепия, виньетка, волокна */
+  /* V: старинная фотография — глубокая сепия, зерно плёнки, виньетка, паспортур фотографии */
   .b5 { top: 100px;
         background:
-          radial-gradient(ellipse 120% 90% at 50% 45%, rgba(0,0,0,0) 55%, rgba(90,60,25,.28) 100%),
-          repeating-linear-gradient(0deg, rgba(122,88,45,.05) 0 1px, transparent 1px 4px),
-          linear-gradient(160deg,#ecdcbc,#dfcda2);
-        box-shadow: inset 0 -3px 0 rgba(139,94,52,.32), inset 0 1px 0 rgba(255,255,255,.7); }
-  /* IV: красный плакат — лучи конструктивизма */
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E"),
+          radial-gradient(ellipse 80% 130% at 50% 20%, rgba(255,238,196,.30), transparent 62%),
+          radial-gradient(ellipse 125% 105% at 50% 50%, rgba(0,0,0,0) 50%, rgba(66,38,8,.42) 100%),
+          repeating-linear-gradient(0deg, rgba(120,82,36,.07) 0 1px, transparent 1px 4px),
+          repeating-linear-gradient(90deg, rgba(120,82,36,.055) 0 1px, transparent 1px 5px),
+          linear-gradient(165deg,#ecd6a8,#d2ae74 55%,#bd955a);
+        box-shadow: inset 0 -4px 0 rgba(112,72,26,.5), inset 0 0 0 3px rgba(104,68,24,.22),
+                    inset 0 0 0 6px rgba(255,246,222,.28), inset 0 1px 0 rgba(255,250,235,.6); }
+  /* IV: конструктивизм — красный клин, планета, лучи, чёрная линия (Лисицкий) */
   .b4 { top: 212px;
         background:
-          repeating-conic-gradient(from 175deg at 8% 50%, rgba(179,57,46,.16) 0 7deg, transparent 7deg 16deg),
-          linear-gradient(115deg, rgba(179,57,46,.1) 0 18%, transparent 18%),
-          #f3f0e8;
-        box-shadow: inset 0 -3px 0 rgba(179,57,46,.45), inset 0 1px 0 rgba(255,255,255,.7); }
-  /* III: обои в цветочек хрущёвки */
+          repeating-conic-gradient(from 172deg at 4% 50%, rgba(163,38,30,.20) 0 6deg, transparent 6deg 15deg),
+          radial-gradient(circle 36px at 84% 52%, rgba(163,38,30,.55) 97%, transparent 100%),
+          linear-gradient(115deg, rgba(163,38,30,.60) 0 13%, rgba(163,38,30,.28) 13% 21%, transparent 21%),
+          linear-gradient(59deg, transparent 45.6%, rgba(35,32,30,.30) 45.8% 46.5%, transparent 46.7%),
+          linear-gradient(160deg,#f7f3e9,#efe8d8);
+        box-shadow: inset 0 -4px 0 rgba(163,38,30,.5), inset 0 1px 0 rgba(255,255,255,.75); }
+  /* III: обои хрущёвки — букетики с лепестками и листьями, золотисто-оливковые */
   .b3 { top: 323px;
         background:
-          radial-gradient(circle 2.2px at 5px 5px, rgba(101,124,68,.16) 98%, transparent),
-          radial-gradient(circle 1px at 10px 11px, rgba(101,124,68,.22) 98%, transparent),
-          radial-gradient(circle 1px at 1px 11px, rgba(101,124,68,.18) 98%, transparent),
-          linear-gradient(160deg,#eaf0e0,#dce6cc);
-        background-size: 22px 22px, 22px 22px, 22px 22px, 100% 100%;
-        box-shadow: inset 0 -3px 0 rgba(122,139,90,.38), inset 0 1px 0 rgba(255,255,255,.7); }
-  /* II: ковёр на стене — ромбовый орнамент */
+          radial-gradient(circle 3.1px at 10px 4.5px, rgba(186,138,52,.42) 97%, transparent),
+          radial-gradient(circle 3.1px at 15.2px 7.7px, rgba(186,138,52,.42) 97%, transparent),
+          radial-gradient(circle 3.1px at 13.2px 13.7px, rgba(186,138,52,.42) 97%, transparent),
+          radial-gradient(circle 3.1px at 6.8px 13.7px, rgba(186,138,52,.42) 97%, transparent),
+          radial-gradient(circle 3.1px at 4.8px 7.7px, rgba(186,138,52,.42) 97%, transparent),
+          radial-gradient(circle 1.9px at 10px 9.5px, rgba(104,84,28,.55) 97%, transparent),
+          radial-gradient(ellipse 2.6px 1.3px at 16.8px 11px, rgba(110,128,66,.34) 97%, transparent),
+          radial-gradient(ellipse 2.6px 1.3px at 3.4px 11.8px, rgba(110,128,66,.34) 97%, transparent),
+          radial-gradient(circle 3.1px at 30px 24.5px, rgba(186,138,52,.34) 97%, transparent),
+          radial-gradient(circle 3.1px at 35.2px 27.7px, rgba(186,138,52,.34) 97%, transparent),
+          radial-gradient(circle 3.1px at 33.2px 33.7px, rgba(186,138,52,.34) 97%, transparent),
+          radial-gradient(circle 3.1px at 26.8px 33.7px, rgba(186,138,52,.34) 97%, transparent),
+          radial-gradient(circle 3.1px at 24.8px 27.7px, rgba(186,138,52,.34) 97%, transparent),
+          radial-gradient(circle 1.9px at 30px 29.5px, rgba(104,84,28,.45) 97%, transparent),
+          radial-gradient(circle 1.4px at 20px 20px, rgba(110,128,66,.30) 97%, transparent),
+          radial-gradient(circle 1.4px at 40px 40px, rgba(110,128,66,.30) 97%, transparent),
+          linear-gradient(160deg,#eef1e0,#e0e6cb);
+        background-size: 40px 40px;
+        box-shadow: inset 0 -4px 0 rgba(120,138,84,.45), inset 0 1px 0 rgba(255,255,255,.75); }
+  /* II: ковёр — тёмная бордовая шерсть, двойной ромб, каймы */
   .b2 { top: 435px;
         background:
-          repeating-linear-gradient(45deg, rgba(122,42,42,.13) 0 2px, transparent 2px 13px),
-          repeating-linear-gradient(-45deg, rgba(122,42,42,.13) 0 2px, transparent 2px 13px),
-          repeating-linear-gradient(90deg, rgba(140,55,45,.06) 0 26px, transparent 26px 52px),
-          linear-gradient(160deg,#ddb890,#d2a97c);
-        box-shadow: inset 0 -3px 0 rgba(140,55,45,.4), inset 0 1px 0 rgba(255,255,255,.65),
-                    inset 0 10px 0 -8px rgba(140,55,45,.18), inset 0 -10px 0 -8px rgba(140,55,45,.18); }
-  /* I: нулевые — граффити на кирпичной стене (Децл, MTV, CS) */
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"),
+          repeating-linear-gradient(45deg, rgba(238,206,158,.30) 0 3px, transparent 3px 17px),
+          repeating-linear-gradient(-45deg, rgba(238,206,158,.30) 0 3px, transparent 3px 17px),
+          repeating-linear-gradient(45deg, transparent 0 5px, rgba(120,28,22,.55) 5px 7px, transparent 7px 17px),
+          repeating-linear-gradient(-45deg, transparent 0 5px, rgba(120,28,22,.55) 5px 7px, transparent 7px 17px),
+          linear-gradient(150deg,#96453c,#772c22 55%,#68241b);
+        box-shadow: inset 0 -4px 0 rgba(58,16,12,.6), inset 0 1px 0 rgba(255,214,170,.3),
+                    inset 0 10px 0 -8px rgba(238,206,158,.5), inset 0 -10px 0 -8px rgba(238,206,158,.5),
+                    inset 0 13px 0 -11px rgba(58,16,12,.55), inset 0 -13px 0 -11px rgba(58,16,12,.55); }
+  /* I: нулевые — тёмный кирпич, яркие брызги, потёки, спрей */
   .b1 { top: 546px;
         background-image:
-          radial-gradient(ellipse 56px 38px at 10% 32%, rgba(124,252,0,.3), transparent 70%),
-          radial-gradient(ellipse 48px 34px at 28% 72%, rgba(255,105,180,.28), transparent 70%),
-          radial-gradient(ellipse 46px 30px at 50% 24%, rgba(0,191,255,.26), transparent 70%),
-          radial-gradient(ellipse 52px 34px at 66% 66%, rgba(255,221,0,.28), transparent 70%),
-          radial-gradient(ellipse 44px 30px at 84% 34%, rgba(170,102,255,.26), transparent 70%),
-          radial-gradient(ellipse 40px 28px at 95% 74%, rgba(255,69,0,.24), transparent 70%),
-          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='46' height='22'><path d='M0 0H46M0 11H46M0 22H46M23 0V11M11.5 11V22M34.5 11V22' stroke='%233d1f0f' stroke-opacity='.4' fill='none'/></svg>"),
-          linear-gradient(160deg,#b07c52,#8f5e3a);
-        box-shadow: inset 0 -3px 0 rgba(60,30,15,.5), inset 0 1px 0 rgba(255,255,255,.3); }
+          radial-gradient(ellipse 60px 40px at 9% 30%, rgba(148,255,40,.5), transparent 72%),
+          radial-gradient(ellipse 52px 36px at 27% 72%, rgba(255,90,180,.46), transparent 72%),
+          radial-gradient(ellipse 50px 32px at 49% 22%, rgba(40,200,255,.44), transparent 72%),
+          radial-gradient(ellipse 56px 38px at 65% 68%, rgba(255,220,40,.46), transparent 72%),
+          radial-gradient(ellipse 48px 32px at 83% 32%, rgba(170,90,255,.44), transparent 72%),
+          radial-gradient(ellipse 44px 30px at 96% 72%, rgba(255,80,30,.42), transparent 72%),
+          linear-gradient(180deg, transparent 0 52%, rgba(148,255,40,.4) 52% 78%, transparent 78%),
+          linear-gradient(180deg, transparent 0 46%, rgba(255,90,180,.38) 46% 74%, transparent 74%),
+          linear-gradient(180deg, transparent 0 40%, rgba(40,200,255,.36) 40% 66%, transparent 66%),
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='22'%3E%3Cpath d='M0 0H46M0 11H46M0 22H46M23 0V11M11.5 11V22M34.5 11V22' stroke='%232a1206' stroke-opacity='.55' fill='none'/%3E%3Cpath d='M0 1H46M0 12H46M23 1V12M34.5 12V23' stroke='%23ffffff' stroke-opacity='.05' fill='none'/%3E%3C/svg%3E"),
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E"),
+          linear-gradient(160deg,#a06a42,#7c4a2a 60%,#63381e);
+        box-shadow: inset 0 -4px 0 rgba(40,18,6,.6), inset 0 1px 0 rgba(255,200,150,.25); }
   .card { position: absolute; width: 190px; height: 84px; border-radius: 10px; padding: 6px 8px 6px 6px;
           font-size: 12px; line-height: 1.22; box-shadow: 0 1px 4px rgba(0,0,0,.12); z-index: 2;
           display: flex; align-items: center; gap: 7px;
