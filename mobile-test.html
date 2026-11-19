@@ -2,29 +2,6 @@
 <html lang="ru"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>
-/* MOBILE-A: ранняя подгонка листа. Только телефоны/планшеты; десктоп не трогаем. */
-(function () {
-  var de = document.documentElement;
-  function isMobile(w) {
-    if (window.matchMedia("(max-width: 700px)").matches) return true;
-    try { return window.matchMedia("(pointer: coarse)").matches && w <= 1100; } catch (e) { return false; }
-  }
-  function fit() {
-    var w = de.clientWidth || window.innerWidth || 0;
-    var k = (isMobile(w) && w > 0 && w < 1950) ? w / 1950 : 1;
-    var st = document.getElementById("mFit");
-    if (k < 0.999) {
-      if (!st) { st = document.createElement("style"); st.id = "mFit"; document.head.appendChild(st); }
-      st.textContent = ".sheet{zoom:" + Math.max(0.12, k) + "}";
-    } else if (st) { st.textContent = ""; }
-  }
-  fit();
-  window.addEventListener("resize", fit);
-  window.addEventListener("orientationchange", function () { fit(); setTimeout(fit, 120); });
-  if (window.visualViewport) { window.visualViewport.addEventListener("resize", fit); }
-})();
-</script>
 <title>Родословная семьи Боровых</title>
 <style>
   @page { size: 516mm 209mm; margin: 0; }
