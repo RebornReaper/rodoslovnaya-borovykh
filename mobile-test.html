@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=600">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Родословная семьи Боровых</title>
 <style>
   @page { size: 516mm 209mm; margin: 0; }
@@ -842,6 +842,9 @@ h1 { color: #E8E2D3 !important; padding-top: 11px; }
 .m-hint { display: none; }
 @media (max-width: 700px) {
   body { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; min-height: 100vh; padding-top: 6px; }
+  /* mobile h1: 34px does not fit 390 — shrink on phone only */
+  h1 { font-size: 22px; letter-spacing: .3px; padding: 9px 12px 0; }
+  h1 .crest { height: 44px; vertical-align: -9px; margin-right: 10px; }
   .m-hint { display: block; margin: 10px 16px 0; font: 11px "Old Standard TT", Georgia, serif; color: #B9AF99;
             letter-spacing: .3px; text-align: center; }
   .person-modal .pm-panel { width: 94vw; padding: 14px 14px 18px; max-height: 92vh; }
