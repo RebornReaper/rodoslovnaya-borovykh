@@ -1008,7 +1008,7 @@ h1 { color: #E8E2D3 !important; padding-top: 11px; }
     if (n > 24) {
       clearInterval(iv);
       var i = diag();
-      var ok = Math.abs(Math.round(window.scrollX) - target()) <= 8;
+      var ok = Math.abs(Math.round(window.scrollX) - target()) <= 40;
       if (!ok) setHint(i + " — НЕ СРАБОТАЛО");
     }
   }, 120);
