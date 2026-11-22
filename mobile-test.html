@@ -967,7 +967,17 @@ h1 { color: #E8E2D3 !important; padding-top: 11px; }
     if (x < 0) x = 0;
     window.scrollTo(x, 0);
   }
-  if (document.readyState === "complete") setTimeout(centerHeader, 60);
-  else window.addEventListener("load", function () { setTimeout(centerHeader, 60); });
+  /* Chrome на телефоне восстанавливает прошлый скролл и затирает наш — отключаем и перебиваем */
+  if (isMobile() && "scrollRestoration" in history) { try { history.scrollRestoration = "manual"; } catch (e) {} }
+  function centerHeaderSoon() {
+    setTimeout(centerHeader, 60);
+    setTimeout(function () {
+      var vw = document.documentElement.clientWidth || window.innerWidth;
+      var x = Math.max(0, Math.round(975 - vw / 2));
+      if (Math.abs(window.scrollX - x) > 2 || Math.abs(window.scrollY) > 2) centerHeader();
+    }, 700);
+  }
+  if (document.readyState === "complete") centerHeaderSoon();
+  else window.addEventListener("load", centerHeaderSoon);
 })();
 </script></body></html>
